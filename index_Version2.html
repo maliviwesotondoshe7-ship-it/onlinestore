@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom Store - Amazing Deals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="promo-banner">🎉 Free Shipping on Orders Over $30! 🚚</div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>🧵 LOOM</h1>
+                    </div>
+                    <div class="nav-center">
+                        <ul class="nav-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#deals">Flash Deals</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                        <input type="text" class="search-box" placeholder="Search products...">
+                        <button class="cart-btn" onclick="toggleCart()">
+                            🛒 Cart <span id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>MEGA SALE EVENT!</h2>
+            <p>UP TO 80% OFF</p>
+            <button class="cta-btn" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section -->
+    <section class="flash-deals" id="deals">
+        <div class="container">
+            <h2 class="section-title">⚡ FLASH DEALS</h2>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="countdown">02:45:30</div>
+                    <img src="https://via.placeholder.com/150?text=Deal+1" alt="Deal">
+                    <p class="deal-label">ENDS SOON!</p>
+                    <p class="original-price">$89.99</p>
+                    <p class="deal-price">$9.99</p>
+                    <p class="discount-badge">-89%</p>
+                </div>
+                <div class="deal-card">
+                    <div class="countdown">01:30:15</div>
+                    <img src="https://via.placeholder.com/150?text=Deal+2" alt="Deal">
+                    <p class="deal-label">ENDS SOON!</p>
+                    <p class="original-price">$45.00</p>
+                    <p class="deal-price">$5.99</p>
+                    <p class="discount-badge">-87%</p>
+                </div>
+                <div class="deal-card">
+                    <div class="countdown">03:12:45</div>
+                    <img src="https://via.placeholder.com/150?text=Deal+3" alt="Deal">
+                    <p class="deal-label">ENDS SOON!</p>
+                    <p class="original-price">$120.00</p>
+                    <p class="deal-price">$14.99</p>
+                    <p class="discount-badge">-88%</p>
+                </div>
+                <div class="deal-card">
+                    <div class="countdown">00:55:20</div>
+                    <img src="https://via.placeholder.com/150?text=Deal+4" alt="Deal">
+                    <p class="deal-label">ENDS SOON!</p>
+                    <p class="original-price">$65.00</p>
+                    <p class="deal-price">$7.99</p>
+                    <p class="discount-badge">-88%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">✨ TRENDING PRODUCTS</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+1" alt="Product">
+                        <span class="hot-label">🔥 HOT</span>
+                    </div>
+                    <h3>Smart Watch Pro</h3>
+                    <p class="product-desc">Advanced features with great price</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (2.5K)</div>
+                    <div class="price-container">
+                        <span class="product-price">$12.99</span>
+                        <span class="original-price">$89.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Smart Watch Pro', 12.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+2" alt="Product">
+                        <span class="hot-label">🔥 HOT</span>
+                    </div>
+                    <h3>Wireless Earbuds</h3>
+                    <p class="product-desc">Premium sound quality, affordable price</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (3.2K)</div>
+                    <div class="price-container">
+                        <span class="product-price">$8.99</span>
+                        <span class="original-price">$79.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Wireless Earbuds', 8.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+3" alt="Product">
+                        <span class="hot-label">🔥 HOT</span>
+                    </div>
+                    <h3>Phone Case Bundle</h3>
+                    <p class="product-desc">Pack of 3 cases with amazing designs</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (1.8K)</div>
+                    <div class="price-container">
+                        <span class="product-price">$4.99</span>
+                        <span class="original-price">$39.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Phone Case Bundle', 4.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+4" alt="Product">
+                        <span class="hot-label">🔥 HOT</span>
+                    </div>
+                    <h3>LED Ring Light</h3>
+                    <p class="product-desc">Perfect for streaming and content creation</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.1K)</div>
+                    <div class="price-container">
+                        <span class="product-price">$9.99</span>
+                        <span class="original-price">$69.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('LED Ring Light', 9.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+5" alt="Product">
+                        <span class="new-label">🆕 NEW</span>
+                    </div>
+                    <h3>Phone Stand</h3>
+                    <p class="product-desc">Adjustable and durable phone holder</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (892)</div>
+                    <div class="price-container">
+                        <span class="product-price">$3.99</span>
+                        <span class="original-price">$24.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('Phone Stand', 3.99)">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200?text=Product+6" alt="Product">
+                        <span class="new-label">🆕 NEW</span>
+                    </div>
+                    <h3>USB Cable Set</h3>
+                    <p class="product-desc">Multiple cable types in one pack</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (1.5K)</div>
+                    <div class="price-container">
+                        <span class="product-price">$2.99</span>
+                        <span class="original-price">$19.99</span>
+                    </div>
+                    <button class="add-btn" onclick="addToCart('USB Cable Set', 2.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>🛒 Shopping Cart</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+                <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                <p class="promo">🎁 FREE SHIPPING ON THIS ORDER!</p>
+                <p class="total">Total: $<span id="total">0.00</span></p>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Loom</h4>
+                    <p>Your trusted source for amazing deals and quality products at unbeatable prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 support@loomstore.com</p>
+                    <p>📱 1-800-LOOM-NOW</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p>📱 Facebook | 📷 Instagram | 🐦 Twitter</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Loom Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
